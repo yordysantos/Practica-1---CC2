@@ -2,7 +2,7 @@
 using namespace std;
 int length(char *v)
 {
-    return (*v) ? 1 + length(v + 1) : 0; //retorna el tamaño deuna cadena
+    return (*v) ? 1 + length(v + 1) : 0; //retorna el tamaÃ±o deuna cadena
 }
 void mostrar(char v[])
 {
@@ -14,7 +14,7 @@ void mostrar(char v[])
 void copiar(char v[],char m[])
 {
 	int d=length(v);
-	for(int i=0;i<(length(v)+length(m));i++)  // recorremos en la suma de tamaños de las cadenas dadas
+	for(int i=0;i<(length(v)+length(m));i++)  // recorremos en la suma de tamaÃ±os de las cadenas dadas
 	{
 		*(v+i)=*(m+i);     //copea cada elemento de m en v
 	}
@@ -28,7 +28,7 @@ char* copy(char *v,const char *m)
 	*q='\0';
 	return v;        //mostramos el array otra vez
 }
-int main(int argc, char** argv) {
+int main() {
 	char *a=new char[40];
 	char *b=new char[40];
 	char x[40],y[40];
