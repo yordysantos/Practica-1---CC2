@@ -2,7 +2,7 @@
 using namespace std;
 int length(char *v)
 {
-    return (*v) ? 1 + length(v + 1) : 0; //retorna el tamaño de una cadena
+    return (*v) ? 1 + length(v + 1) : 0; //retorna el tamaÃ±o de una cadena
 }
 int comparar(const char* s1, const char* s2)
 {
@@ -25,7 +25,7 @@ char* palindroma(char*s) //verifica si una palabra es palindroma o no
 		cout<<"no es palindroma";
 		*(t+tam)='\0';
 }
-int main(int argc, char** argv) {
+int main() {
 	char *cad=new char[10];
 	cout<<"Inserte la cadena: ";
 	gets(cad);
