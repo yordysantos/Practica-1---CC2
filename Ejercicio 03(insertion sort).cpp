@@ -1,35 +1,56 @@
 #include <iostream>
+
 using namespace std;
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-void insertionSort(int arr[],int size)
+
+void ingresarE(int A[100],int &n)
 {
-	int j,temp;
-	for(int i=0;i<size;i++)
-	{
-		j=i;
-		while(j>0 && arr[j-1]>arr[j])// comenzamos desde j=1 y siempre y cuando que arr[j-1]>arr[j] haremos un intercambio
-		{
-			temp=arr[j];  // guardamos a arr[j]=en temp
-			arr[j]=arr[j-1];//le asignamos un nuevo valor a arr[j] que es arr[j-1]
-			arr[j-1]=temp;  // y arr[j-1] le asignamos el valor de temp
-			j--;           //y disminuye j;
-		}
-	}
+  cout<<"Numero de elementos del array: ";cin>>n;
+
+  for(int i=0;i<n;i++)
+  {
+    cout<<"Elemento ["<<i<<"]: ";
+    cin>>A[i];
+  }
+
+  cout<<"Tu array creado es : \n";
+  cout<<"A =[";
+  for(int i=0;i<n;i++){
+    cout<<A[i]<<" ";
+  }
+  cout<<"]";
 }
 
-int main(int argc, char** argv) {
-	int size;
-	cin>>size;
-	int *numeros=new int[size];
-	for(int i=0;i<size;i++)
-	{
-		cin>>numeros[i];
-	}
-	cout<<endl;
-	insertionSort(numeros,size);
-	for(int i=0;i<size;i++)
-	{
-		cout<<numeros[i]<<" ";
-	}
-	return 0;
+void insertion_sort(int A[],int n)
+{
+  int i, key;
+  for (int j=1;j<n;j++)
+  {
+    key=A[j];
+    i=j-1;
+    while(i>=0 && A[i]>key)
+    {
+      A[i+1]=A[i];
+      i=i-1;
+    }
+    A[i+1]=key;
+  }
+  
+
+}
+
+void print_(int A[], int n)
+{
+  for(int k = 0;A[k] != '\0';k++)
+  {
+    cout<<A[k];
+  }
+}
+
+int main()
+{
+  int A[100],n;
+  ingresarE(A,n);
+  insertion_sort(A,n);
+  print_(A,n);
+  return 0;
 }
