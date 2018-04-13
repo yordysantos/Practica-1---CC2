@@ -2,7 +2,7 @@
 using namespace std;
 int length(char *v)
 {
-	return (*v) ? 1 + length(v + 1) : 0; //retorna el tamaño de una cadena
+	return (*v) ? 1 + length(v + 1) : 0; //retorna el tamaÃ±o de una cadena
 }
 void mostrar(char *v) //funcion que muestra el array
 {
@@ -42,7 +42,7 @@ void invertidor (char v[])
     return mostrar(inverso);
 }
 
-int main(int argc, char** argv) {
+int main() {
 	char a[20];
 	char *b=new char[30];
 	cout<<"Ingrese cadena: ";
